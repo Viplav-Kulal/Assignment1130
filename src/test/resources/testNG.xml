@@ -1,0 +1,12 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="AxelerantAssignment" verbose="1">
+	<listeners>
+		<listener class-name="utils.customListener.TestListner" />
+	</listeners>
+	<test name="AccountOpening">
+		<classes>
+			<class name="com.axelerant.testcases.TestCases_AccountOpening" />
+		</classes>
+	</test>
+</suite>
