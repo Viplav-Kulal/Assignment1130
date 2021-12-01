@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [AxelerantAssignment]" guice-stage="DEVELOPMENT">
+  <listeners>
+    <listener class-name="utils.customListener.TestListner"/>
+  </listeners>
+  <test thread-count="5" name="APITest_Plus_VisualTest(failed)">
+    <classes>
+      <class name="com.axelerant.testcases.TestCase_Rest_AccountOpen">
+        <methods>
+          <include name="tc_verifySavingsAccountBalanceUpdated"/>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- com.axelerant.testcases.TestCase_Rest_AccountOpen -->
+    </classes>
+  </test> <!-- APITest_Plus_VisualTest(failed) -->
+</suite> <!-- Failed suite [AxelerantAssignment] -->

@@ -1,0 +1,555 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="1" total="9" passed="7" failed="1" skipped="0">
+  <reporter-output>
+    <line>
+      <![CDATA[Staring Suite  -> AxelerantAssignment]]>
+    </line>
+    <line>
+      <![CDATA[Test Execution started for -> tc_createCheckingsAccount]]>
+    </line>
+    <line>
+      <![CDATA[Create checking account with API]]>
+    </line>
+    <line>
+      <![CDATA[{
+    "id": 32103,
+    "customerId": 19871,
+    "balance": 0,
+    "type": "CHECKING"
+}]]>
+    </line>
+    <line>
+      <![CDATA[Checking account successfully created with ID : 32103]]>
+    </line>
+    <line>
+      <![CDATA[Test Execution PASSED for -> tc_createCheckingsAccount]]>
+    </line>
+    <line>
+      <![CDATA[Test Execution started for -> tc_getCheckingAccountDetails]]>
+    </line>
+    <line>
+      <![CDATA[Verify Cheking account details with API]]>
+    </line>
+    <line>
+      <![CDATA[Checking account details returned correctly]]>
+    </line>
+    <line>
+      <![CDATA[{
+    "id": 32103,
+    "customerId": 19871,
+    "balance": 100.0,
+    "type": "CHECKING"
+}]]>
+    </line>
+    <line>
+      <![CDATA[Test Execution PASSED for -> tc_getCheckingAccountDetails]]>
+    </line>
+    <line>
+      <![CDATA[Test Execution started for -> tc_createSavingssAccount]]>
+    </line>
+    <line>
+      <![CDATA[Create Saving account with API]]>
+    </line>
+    <line>
+      <![CDATA[{
+    "id": 32214,
+    "customerId": 19871,
+    "balance": 0,
+    "type": "SAVINGS"
+}]]>
+    </line>
+    <line>
+      <![CDATA[Savings account successfully created with ID : 32214]]>
+    </line>
+    <line>
+      <![CDATA[{
+    "id": 32214,
+    "customerId": 19871,
+    "balance": 0,
+    "type": "SAVINGS"
+}]]>
+    </line>
+    <line>
+      <![CDATA[Test Execution PASSED for -> tc_createSavingssAccount]]>
+    </line>
+    <line>
+      <![CDATA[Test Execution started for -> tc_getSavingAccountDetails]]>
+    </line>
+    <line>
+      <![CDATA[Verify Saving account details with API]]>
+    </line>
+    <line>
+      <![CDATA[Fetched account details correctly]]>
+    </line>
+    <line>
+      <![CDATA[{
+    "id": 32214,
+    "customerId": 19871,
+    "balance": 100.0,
+    "type": "SAVINGS"
+}]]>
+    </line>
+    <line>
+      <![CDATA[Test Execution PASSED for -> tc_getSavingAccountDetails]]>
+    </line>
+    <line>
+      <![CDATA[Test Execution started for -> tc_billPayFromCheckingsToSavings]]>
+    </line>
+    <line>
+      <![CDATA[Bill Pay using restAPI]]>
+    </line>
+    <line>
+      <![CDATA[Bill payment of $200 is successfull.]]>
+    </line>
+    <line>
+      <![CDATA[{
+    "payeeName": "RestApi",
+    "amount": 200,
+    "accountId": 32103
+}]]>
+    </line>
+    <line>
+      <![CDATA[Verifying amount is deducted correctly from checkings account and balance is updated]]>
+    </line>
+    <line>
+      <![CDATA[{
+    "id": 32103,
+    "customerId": 19871,
+    "balance": -100.0,
+    "type": "CHECKING"
+}]]>
+    </line>
+    <line>
+      <![CDATA[Amount deducted from checkings account is correct]]>
+    </line>
+    <line>
+      <![CDATA[Verify the last transaction amount for Checkings account]]>
+    </line>
+    <line>
+      <![CDATA[Last transaction shows 200 debited from checking account : Debit : 200.0]]>
+    </line>
+    <line>
+      <![CDATA[Test Execution PASSED for -> tc_billPayFromCheckingsToSavings]]>
+    </line>
+    <line>
+      <![CDATA[Test Execution started for -> tc_verifySavingsAccountBalanceUpdated]]>
+    </line>
+    <line>
+      <![CDATA[Verify Saving account balance is updated]]>
+    </line>
+    <line>
+      <![CDATA[{
+    "id": 32214,
+    "customerId": 19871,
+    "balance": 100.0,
+    "type": "SAVINGS"
+}]]>
+    </line>
+    <line>
+      <![CDATA[Incorrect amount is added to savings account]]>
+    </line>
+    <line>
+      <![CDATA[Verify the last transaction amount for Checkings account]]>
+    </line>
+    <line>
+      <![CDATA[Last transaction does not show $200 added. Last transaction is : Credit : 100.0]]>
+    </line>
+    <line>
+      <![CDATA[Test Execution FAILED for -> tc_verifySavingsAccountBalanceUpdated]]>
+    </line>
+    <line>
+      <![CDATA[Test Execution started for -> tc_verifyCheckingAccoutnActivityPage]]>
+    </line>
+    <line>
+      <![CDATA[Verify Checking account created through Rest API]]>
+    </line>
+    <line>
+      <![CDATA[Logging into viplav's account]]>
+    </line>
+    <line>
+      <![CDATA[Entering text viplav in  field]]>
+    </line>
+    <line>
+      <![CDATA[Entering text demo in  field]]>
+    </line>
+    <line>
+      <![CDATA[Navigating to URL - https://parabank.parasoft.com/parabank/activity.htm?id=32103]]>
+    </line>
+    <line>
+      <![CDATA[Verifying Checking account activity details]]>
+    </line>
+    <line>
+      <![CDATA[Account ID is correct : 32103]]>
+    </line>
+    <line>
+      <![CDATA[Account Type is correct : CHECKING]]>
+    </line>
+    <line>
+      <![CDATA[Account ID is correct : -100.00]]>
+    </line>
+    <line>
+      <![CDATA[Test Execution PASSED for -> tc_verifyCheckingAccoutnActivityPage]]>
+    </line>
+    <line>
+      <![CDATA[Test Execution started for -> tc_verifySavingAccoutnActivityPage]]>
+    </line>
+    <line>
+      <![CDATA[Verify Savings account created through Rest API]]>
+    </line>
+    <line>
+      <![CDATA[Navigating to URL - https://parabank.parasoft.com/parabank/activity.htm?id=32214]]>
+    </line>
+    <line>
+      <![CDATA[Verifying Savings account activity details]]>
+    </line>
+    <line>
+      <![CDATA[Account ID is correct : 32214]]>
+    </line>
+    <line>
+      <![CDATA[Account Type is correct : SAVINGS]]>
+    </line>
+    <line>
+      <![CDATA[Account ID is correct : 100.00]]>
+    </line>
+    <line>
+      <![CDATA[Test Execution PASSED for -> tc_verifySavingAccoutnActivityPage]]>
+    </line>
+    <line>
+      <![CDATA[Suite completed  -> AxelerantAssignment]]>
+    </line>
+    <line>
+      <![CDATA[Closing driver...]]>
+    </line>
+  </reporter-output>
+  <suite started-at="2021-12-01T23:39:28 IST" name="AxelerantAssignment" finished-at="2021-12-01T23:39:55 IST" duration-ms="27622">
+    <groups>
+    </groups>
+    <test started-at="2021-12-01T23:39:28 IST" name="APITest_Plus_VisualTest" finished-at="2021-12-01T23:39:55 IST" duration-ms="27622">
+      <class name="com.axelerant.testcases.TestCase_AccountActivity">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.axelerant.testcases.TestCase_AccountActivity@78e4deb0]" started-at="2021-12-01T23:39:19 IST" name="setUp" finished-at="2021-12-01T23:39:28 IST" duration-ms="8888" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="tc_verifyCheckingAccoutnActivityPage()[pri:0, instance:com.axelerant.testcases.TestCase_AccountActivity@78e4deb0]" started-at="2021-12-01T23:39:50 IST" name="tc_verifyCheckingAccoutnActivityPage" finished-at="2021-12-01T23:39:54 IST" duration-ms="3557" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Test Execution started for -> tc_verifyCheckingAccoutnActivityPage]]>
+            </line>
+            <line>
+              <![CDATA[Verify Checking account created through Rest API]]>
+            </line>
+            <line>
+              <![CDATA[Logging into viplav's account]]>
+            </line>
+            <line>
+              <![CDATA[Entering text viplav in  field]]>
+            </line>
+            <line>
+              <![CDATA[Entering text demo in  field]]>
+            </line>
+            <line>
+              <![CDATA[Navigating to URL - https://parabank.parasoft.com/parabank/activity.htm?id=32103]]>
+            </line>
+            <line>
+              <![CDATA[Verifying Checking account activity details]]>
+            </line>
+            <line>
+              <![CDATA[Account ID is correct : 32103]]>
+            </line>
+            <line>
+              <![CDATA[Account Type is correct : CHECKING]]>
+            </line>
+            <line>
+              <![CDATA[Account ID is correct : -100.00]]>
+            </line>
+            <line>
+              <![CDATA[Test Execution PASSED for -> tc_verifyCheckingAccoutnActivityPage]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- tc_verifyCheckingAccoutnActivityPage -->
+        <test-method signature="tc_verifySavingAccoutnActivityPage()[pri:1, instance:com.axelerant.testcases.TestCase_AccountActivity@78e4deb0]" started-at="2021-12-01T23:39:54 IST" name="tc_verifySavingAccoutnActivityPage" finished-at="2021-12-01T23:39:55 IST" duration-ms="1834" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Test Execution started for -> tc_verifySavingAccoutnActivityPage]]>
+            </line>
+            <line>
+              <![CDATA[Verify Savings account created through Rest API]]>
+            </line>
+            <line>
+              <![CDATA[Navigating to URL - https://parabank.parasoft.com/parabank/activity.htm?id=32214]]>
+            </line>
+            <line>
+              <![CDATA[Verifying Savings account activity details]]>
+            </line>
+            <line>
+              <![CDATA[Account ID is correct : 32214]]>
+            </line>
+            <line>
+              <![CDATA[Account Type is correct : SAVINGS]]>
+            </line>
+            <line>
+              <![CDATA[Account ID is correct : 100.00]]>
+            </line>
+            <line>
+              <![CDATA[Test Execution PASSED for -> tc_verifySavingAccoutnActivityPage]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- tc_verifySavingAccoutnActivityPage -->
+      </class> <!-- com.axelerant.testcases.TestCase_AccountActivity -->
+      <class name="com.axelerant.testcases.TestCase_Rest_AccountOpen">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.axelerant.testcases.TestCase_Rest_AccountOpen@6d4d66d2]" started-at="2021-12-01T23:39:28 IST" name="setUp" finished-at="2021-12-01T23:39:29 IST" duration-ms="888" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="tc_createCheckingsAccount()[pri:0, instance:com.axelerant.testcases.TestCase_Rest_AccountOpen@6d4d66d2]" started-at="2021-12-01T23:39:29 IST" name="tc_createCheckingsAccount" finished-at="2021-12-01T23:39:33 IST" duration-ms="4272" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Test Execution started for -> tc_createCheckingsAccount]]>
+            </line>
+            <line>
+              <![CDATA[Create checking account with API]]>
+            </line>
+            <line>
+              <![CDATA[{
+    "id": 32103,
+    "customerId": 19871,
+    "balance": 0,
+    "type": "CHECKING"
+}]]>
+            </line>
+            <line>
+              <![CDATA[Checking account successfully created with ID : 32103]]>
+            </line>
+            <line>
+              <![CDATA[Test Execution PASSED for -> tc_createCheckingsAccount]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- tc_createCheckingsAccount -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.axelerant.testcases.TestCase_Rest_AccountOpen@6d4d66d2]" started-at="2021-12-01T23:39:33 IST" name="setUp" finished-at="2021-12-01T23:39:33 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="tc_getCheckingAccountDetails()[pri:1, instance:com.axelerant.testcases.TestCase_Rest_AccountOpen@6d4d66d2]" started-at="2021-12-01T23:39:33 IST" name="tc_getCheckingAccountDetails" finished-at="2021-12-01T23:39:35 IST" duration-ms="2274" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Test Execution started for -> tc_getCheckingAccountDetails]]>
+            </line>
+            <line>
+              <![CDATA[Verify Cheking account details with API]]>
+            </line>
+            <line>
+              <![CDATA[Checking account details returned correctly]]>
+            </line>
+            <line>
+              <![CDATA[{
+    "id": 32103,
+    "customerId": 19871,
+    "balance": 100.0,
+    "type": "CHECKING"
+}]]>
+            </line>
+            <line>
+              <![CDATA[Test Execution PASSED for -> tc_getCheckingAccountDetails]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- tc_getCheckingAccountDetails -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.axelerant.testcases.TestCase_Rest_AccountOpen@6d4d66d2]" started-at="2021-12-01T23:39:35 IST" name="setUp" finished-at="2021-12-01T23:39:35 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="tc_createSavingssAccount()[pri:2, instance:com.axelerant.testcases.TestCase_Rest_AccountOpen@6d4d66d2]" started-at="2021-12-01T23:39:35 IST" name="tc_createSavingssAccount" finished-at="2021-12-01T23:39:38 IST" duration-ms="2246" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Test Execution started for -> tc_createSavingssAccount]]>
+            </line>
+            <line>
+              <![CDATA[Create Saving account with API]]>
+            </line>
+            <line>
+              <![CDATA[{
+    "id": 32214,
+    "customerId": 19871,
+    "balance": 0,
+    "type": "SAVINGS"
+}]]>
+            </line>
+            <line>
+              <![CDATA[Savings account successfully created with ID : 32214]]>
+            </line>
+            <line>
+              <![CDATA[{
+    "id": 32214,
+    "customerId": 19871,
+    "balance": 0,
+    "type": "SAVINGS"
+}]]>
+            </line>
+            <line>
+              <![CDATA[Test Execution PASSED for -> tc_createSavingssAccount]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- tc_createSavingssAccount -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.axelerant.testcases.TestCase_Rest_AccountOpen@6d4d66d2]" started-at="2021-12-01T23:39:38 IST" name="setUp" finished-at="2021-12-01T23:39:38 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="tc_getSavingAccountDetails()[pri:3, instance:com.axelerant.testcases.TestCase_Rest_AccountOpen@6d4d66d2]" started-at="2021-12-01T23:39:38 IST" name="tc_getSavingAccountDetails" finished-at="2021-12-01T23:39:39 IST" duration-ms="1577" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Test Execution started for -> tc_getSavingAccountDetails]]>
+            </line>
+            <line>
+              <![CDATA[Verify Saving account details with API]]>
+            </line>
+            <line>
+              <![CDATA[Fetched account details correctly]]>
+            </line>
+            <line>
+              <![CDATA[{
+    "id": 32214,
+    "customerId": 19871,
+    "balance": 100.0,
+    "type": "SAVINGS"
+}]]>
+            </line>
+            <line>
+              <![CDATA[Test Execution PASSED for -> tc_getSavingAccountDetails]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- tc_getSavingAccountDetails -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.axelerant.testcases.TestCase_Rest_AccountOpen@6d4d66d2]" started-at="2021-12-01T23:39:39 IST" name="setUp" finished-at="2021-12-01T23:39:39 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="tc_billPayFromCheckingsToSavings()[pri:4, instance:com.axelerant.testcases.TestCase_Rest_AccountOpen@6d4d66d2]" started-at="2021-12-01T23:39:39 IST" name="tc_billPayFromCheckingsToSavings" finished-at="2021-12-01T23:39:46 IST" duration-ms="7058" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Test Execution started for -> tc_billPayFromCheckingsToSavings]]>
+            </line>
+            <line>
+              <![CDATA[Bill Pay using restAPI]]>
+            </line>
+            <line>
+              <![CDATA[Bill payment of $200 is successfull.]]>
+            </line>
+            <line>
+              <![CDATA[{
+    "payeeName": "RestApi",
+    "amount": 200,
+    "accountId": 32103
+}]]>
+            </line>
+            <line>
+              <![CDATA[Verifying amount is deducted correctly from checkings account and balance is updated]]>
+            </line>
+            <line>
+              <![CDATA[{
+    "id": 32103,
+    "customerId": 19871,
+    "balance": -100.0,
+    "type": "CHECKING"
+}]]>
+            </line>
+            <line>
+              <![CDATA[Amount deducted from checkings account is correct]]>
+            </line>
+            <line>
+              <![CDATA[Verify the last transaction amount for Checkings account]]>
+            </line>
+            <line>
+              <![CDATA[Last transaction shows 200 debited from checking account : Debit : 200.0]]>
+            </line>
+            <line>
+              <![CDATA[Test Execution PASSED for -> tc_billPayFromCheckingsToSavings]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- tc_billPayFromCheckingsToSavings -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.axelerant.testcases.TestCase_Rest_AccountOpen@6d4d66d2]" started-at="2021-12-01T23:39:46 IST" name="setUp" finished-at="2021-12-01T23:39:46 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="tc_verifySavingsAccountBalanceUpdated()[pri:5, instance:com.axelerant.testcases.TestCase_Rest_AccountOpen@6d4d66d2]" started-at="2021-12-01T23:39:46 IST" name="tc_verifySavingsAccountBalanceUpdated" finished-at="2021-12-01T23:39:50 IST" duration-ms="3805" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[The following asserts failed:
+expected [true] but found [false],
+expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: The following asserts failed:
+expected [true] but found [false],
+expected [true] but found [false]
+at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:47)
+at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:31)
+at com.axelerant.testcases.TestCase_Rest_AccountOpen.tc_verifySavingsAccountBalanceUpdated(TestCase_Rest_AccountOpen.java:201)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+            <line>
+              <![CDATA[Test Execution started for -> tc_verifySavingsAccountBalanceUpdated]]>
+            </line>
+            <line>
+              <![CDATA[Verify Saving account balance is updated]]>
+            </line>
+            <line>
+              <![CDATA[{
+    "id": 32214,
+    "customerId": 19871,
+    "balance": 100.0,
+    "type": "SAVINGS"
+}]]>
+            </line>
+            <line>
+              <![CDATA[Incorrect amount is added to savings account]]>
+            </line>
+            <line>
+              <![CDATA[Verify the last transaction amount for Checkings account]]>
+            </line>
+            <line>
+              <![CDATA[Last transaction does not show $200 added. Last transaction is : Credit : 100.0]]>
+            </line>
+            <line>
+              <![CDATA[Test Execution FAILED for -> tc_verifySavingsAccountBalanceUpdated]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- tc_verifySavingsAccountBalanceUpdated -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.axelerant.testcases.TestCase_Rest_AccountOpen@6d4d66d2]" started-at="2021-12-01T23:39:55 IST" name="tearDown" finished-at="2021-12-01T23:39:56 IST" duration-ms="968" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Closing driver...]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.axelerant.testcases.TestCase_Rest_AccountOpen -->
+    </test> <!-- APITest_Plus_VisualTest -->
+  </suite> <!-- AxelerantAssignment -->
+</testng-results>

@@ -23,11 +23,19 @@ public class TestListner implements ITestListener {
 
 	public void onTestSuccess(ITestResult result) {
 		Log.info("Test Execution PASSED for -> " + result.getName());
+		if (result.getTestClass().toString().contains("TestCase_Rest_AccountOpen")) {
+			
+
+		}
 	}
 
 	public void onTestFailure(ITestResult result) {
 		Log.info("Test Execution FAILED for -> " + result.getName());
-		FileOperations.takeScreenShot(result.getName().toString().trim(), BaseClass.driver);
+		if (result.getTestClass().toString().contains("TestCase_Rest_AccountOpen")) {
+
+		} else {
+			FileOperations.takeScreenShot(result.getName().toString().trim(), BaseClass.driver);
+		}
 	}
 
 	public void onTestSkipped(ITestResult result) {

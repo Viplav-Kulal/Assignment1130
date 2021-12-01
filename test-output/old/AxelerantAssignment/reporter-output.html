@@ -1,0 +1,100 @@
+<h2>Reporter output</h2><table><tr><td>Staring Suite  -> AxelerantAssignment</td></tr>
+<tr><td>Test Execution started for -> tc_createCheckingsAccount</td></tr>
+<tr><td>Create checking account with API</td></tr>
+<tr><td>{
+    "id": 32103,
+    "customerId": 19871,
+    "balance": 0,
+    "type": "CHECKING"
+}</td></tr>
+<tr><td>Checking account successfully created with ID : 32103</td></tr>
+<tr><td>Test Execution PASSED for -> tc_createCheckingsAccount</td></tr>
+<tr><td>Test Execution started for -> tc_getCheckingAccountDetails</td></tr>
+<tr><td>Verify Cheking account details with API</td></tr>
+<tr><td>Checking account details returned correctly</td></tr>
+<tr><td>{
+    "id": 32103,
+    "customerId": 19871,
+    "balance": 100.0,
+    "type": "CHECKING"
+}</td></tr>
+<tr><td>Test Execution PASSED for -> tc_getCheckingAccountDetails</td></tr>
+<tr><td>Test Execution started for -> tc_createSavingssAccount</td></tr>
+<tr><td>Create Saving account with API</td></tr>
+<tr><td>{
+    "id": 32214,
+    "customerId": 19871,
+    "balance": 0,
+    "type": "SAVINGS"
+}</td></tr>
+<tr><td>Savings account successfully created with ID : 32214</td></tr>
+<tr><td>{
+    "id": 32214,
+    "customerId": 19871,
+    "balance": 0,
+    "type": "SAVINGS"
+}</td></tr>
+<tr><td>Test Execution PASSED for -> tc_createSavingssAccount</td></tr>
+<tr><td>Test Execution started for -> tc_getSavingAccountDetails</td></tr>
+<tr><td>Verify Saving account details with API</td></tr>
+<tr><td>Fetched account details correctly</td></tr>
+<tr><td>{
+    "id": 32214,
+    "customerId": 19871,
+    "balance": 100.0,
+    "type": "SAVINGS"
+}</td></tr>
+<tr><td>Test Execution PASSED for -> tc_getSavingAccountDetails</td></tr>
+<tr><td>Test Execution started for -> tc_billPayFromCheckingsToSavings</td></tr>
+<tr><td>Bill Pay using restAPI</td></tr>
+<tr><td>Bill payment of $200 is successfull.</td></tr>
+<tr><td>{
+    "payeeName": "RestApi",
+    "amount": 200,
+    "accountId": 32103
+}</td></tr>
+<tr><td>Verifying amount is deducted correctly from checkings account and balance is updated</td></tr>
+<tr><td>{
+    "id": 32103,
+    "customerId": 19871,
+    "balance": -100.0,
+    "type": "CHECKING"
+}</td></tr>
+<tr><td>Amount deducted from checkings account is correct</td></tr>
+<tr><td>Verify the last transaction amount for Checkings account</td></tr>
+<tr><td>Last transaction shows 200 debited from checking account : Debit : 200.0</td></tr>
+<tr><td>Test Execution PASSED for -> tc_billPayFromCheckingsToSavings</td></tr>
+<tr><td>Test Execution started for -> tc_verifySavingsAccountBalanceUpdated</td></tr>
+<tr><td>Verify Saving account balance is updated</td></tr>
+<tr><td>{
+    "id": 32214,
+    "customerId": 19871,
+    "balance": 100.0,
+    "type": "SAVINGS"
+}</td></tr>
+<tr><td>Incorrect amount is added to savings account</td></tr>
+<tr><td>Verify the last transaction amount for Checkings account</td></tr>
+<tr><td>Last transaction does not show $200 added. Last transaction is : Credit : 100.0</td></tr>
+<tr><td>Test Execution FAILED for -> tc_verifySavingsAccountBalanceUpdated</td></tr>
+<tr><td>Test Execution started for -> tc_verifyCheckingAccoutnActivityPage</td></tr>
+<tr><td>Verify Checking account created through Rest API</td></tr>
+<tr><td>Logging into viplav's account</td></tr>
+<tr><td>Entering text viplav in  field</td></tr>
+<tr><td>Entering text demo in  field</td></tr>
+<tr><td>Navigating to URL - https://parabank.parasoft.com/parabank/activity.htm?id=32103</td></tr>
+<tr><td>Verifying Checking account activity details</td></tr>
+<tr><td>Account ID is correct : 32103</td></tr>
+<tr><td>Account Type is correct : CHECKING</td></tr>
+<tr><td>Account ID is correct : -100.00</td></tr>
+<tr><td>Test Execution PASSED for -> tc_verifyCheckingAccoutnActivityPage</td></tr>
+<tr><td>Test Execution started for -> tc_verifySavingAccoutnActivityPage</td></tr>
+<tr><td>Verify Savings account created through Rest API</td></tr>
+<tr><td>Navigating to URL - https://parabank.parasoft.com/parabank/activity.htm?id=32214</td></tr>
+<tr><td>Verifying Savings account activity details</td></tr>
+<tr><td>Account ID is correct : 32214</td></tr>
+<tr><td>Account Type is correct : SAVINGS</td></tr>
+<tr><td>Account ID is correct : 100.00</td></tr>
+<tr><td>Test Execution PASSED for -> tc_verifySavingAccoutnActivityPage</td></tr>
+<tr><td>Suite completed  -> AxelerantAssignment</td></tr>
+<tr><td>Closing driver...</td></tr>
+</table>

@@ -12,4 +12,5 @@ public interface IBaseInterface {
 			.format(Calendar.getInstance().getTime());
 	public final static String PROP_PATH = RESOURCE_PATH + "/properties/environment.properties";
 	public static final String SCREENSHOT_PATH = PROJECT_PATH + "/ScreenShots";
+	public static final String BASE_URL="https://parabank.parasoft.com/parabank/services_proxy/bank/";
 }

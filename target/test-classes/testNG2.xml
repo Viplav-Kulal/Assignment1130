@@ -1,0 +1,13 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="AxelerantAssignment" verbose="1">
+	<listeners>
+		<listener class-name="utils.customListener.TestListner" />
+	</listeners>
+	<test name="APITest_Plus_VisualTest">
+		<classes>
+			<class name="com.axelerant.testcases.TestCase_Rest_AccountOpen" />
+			<class name="com.axelerant.testcases.TestCase_AccountActivity" />
+		</classes>
+	</test>
+</suite>

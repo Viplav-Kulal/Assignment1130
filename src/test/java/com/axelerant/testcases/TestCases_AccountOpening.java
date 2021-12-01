@@ -15,7 +15,7 @@ public class TestCases_AccountOpening extends BaseMethods {
 	public void tc_login() {
 		login(user, pswd);
 		if (isVisible(getaccountOverview(), 5)) {
-			Log.info(fullName + " logged in successfully");
+			Log.info(user + " logged in successfully");
 			Assert.assertTrue(true);
 		} else {
 			Log.info("Login failed");

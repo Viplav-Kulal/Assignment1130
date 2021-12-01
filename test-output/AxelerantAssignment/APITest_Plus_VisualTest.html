@@ -1,0 +1,311 @@
+<html>
+<head>
+<title>TestNG:  APITest_Plus_VisualTest</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>APITest_Plus_VisualTest</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>7/1/0</td>
+</tr><tr>
+<td>Started on:</td><td>Wed Dec 01 23:39:28 IST 2021</td>
+</tr>
+<tr><td>Total time:</td><td>27 seconds (27622 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.axelerant.testcases.TestCase_Rest_AccountOpen.tc_verifySavingsAccountBalanceUpdated()'><b>tc_verifySavingsAccountBalanceUpdated</b><br>Test class: com.axelerant.testcases.TestCase_Rest_AccountOpen<br/>
+<a href="#Output-1050653829" onClick='toggleBox("Output-1050653829", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1050653829" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1050653829">
+Test Execution started for -> tc_verifySavingsAccountBalanceUpdated<br/>
+Verify Saving account balance is updated<br/>
+{
+    "id": 32214,
+    "customerId": 19871,
+    "balance": 100.0,
+    "type": "SAVINGS"
+}<br/>
+Incorrect amount is added to savings account<br/>
+Verify the last transaction amount for Checkings account<br/>
+Last transaction does not show $200 added. Last transaction is : Credit : 100.0<br/>
+Test Execution FAILED for -> tc_verifySavingsAccountBalanceUpdated<br/>
+</div>
+</td>
+<td><div><pre>java.lang.AssertionError: The following asserts failed:
+	expected [true] but found [false],
+	expected [true] but found [false]
+	at com.axelerant.testcases.TestCase_Rest_AccountOpen.tc_verifySavingsAccountBalanceUpdated(TestCase_Rest_AccountOpen.java:201)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 29 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1050653829", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1050653829'><pre>java.lang.AssertionError: The following asserts failed:
+	expected [true] but found [false],
+	expected [true] but found [false]
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:47)
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:31)
+	at com.axelerant.testcases.TestCase_Rest_AccountOpen.tc_verifySavingsAccountBalanceUpdated(TestCase_Rest_AccountOpen.java:201)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>3</td>
+<td>com.axelerant.testcases.TestCase_Rest_AccountOpen@6d4d66d2</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.axelerant.testcases.TestCase_Rest_AccountOpen.tc_getCheckingAccountDetails()'><b>tc_getCheckingAccountDetails</b><br>Test class: com.axelerant.testcases.TestCase_Rest_AccountOpen<br/>
+<a href="#Output-1662140450" onClick='toggleBox("Output-1662140450", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1662140450" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1662140450">
+Test Execution started for -> tc_getCheckingAccountDetails<br/>
+Verify Cheking account details with API<br/>
+Checking account details returned correctly<br/>
+{
+    "id": 32103,
+    "customerId": 19871,
+    "balance": 100.0,
+    "type": "CHECKING"
+}<br/>
+Test Execution PASSED for -> tc_getCheckingAccountDetails<br/>
+</div>
+</td>
+<td></td>
+<td>2</td>
+<td>com.axelerant.testcases.TestCase_Rest_AccountOpen@6d4d66d2</td></tr>
+<tr>
+<td title='com.axelerant.testcases.TestCase_Rest_AccountOpen.tc_createCheckingsAccount()'><b>tc_createCheckingsAccount</b><br>Test class: com.axelerant.testcases.TestCase_Rest_AccountOpen<br/>
+<a href="#Output-783172425" onClick='toggleBox("Output-783172425", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-783172425" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-783172425">
+Test Execution started for -> tc_createCheckingsAccount<br/>
+Create checking account with API<br/>
+{
+    "id": 32103,
+    "customerId": 19871,
+    "balance": 0,
+    "type": "CHECKING"
+}<br/>
+Checking account successfully created with ID : 32103<br/>
+Test Execution PASSED for -> tc_createCheckingsAccount<br/>
+</div>
+</td>
+<td></td>
+<td>4</td>
+<td>com.axelerant.testcases.TestCase_Rest_AccountOpen@6d4d66d2</td></tr>
+<tr>
+<td title='com.axelerant.testcases.TestCase_Rest_AccountOpen.tc_getSavingAccountDetails()'><b>tc_getSavingAccountDetails</b><br>Test class: com.axelerant.testcases.TestCase_Rest_AccountOpen<br/>
+<a href="#Output-476987385" onClick='toggleBox("Output-476987385", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-476987385" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-476987385">
+Test Execution started for -> tc_getSavingAccountDetails<br/>
+Verify Saving account details with API<br/>
+Fetched account details correctly<br/>
+{
+    "id": 32214,
+    "customerId": 19871,
+    "balance": 100.0,
+    "type": "SAVINGS"
+}<br/>
+Test Execution PASSED for -> tc_getSavingAccountDetails<br/>
+</div>
+</td>
+<td></td>
+<td>1</td>
+<td>com.axelerant.testcases.TestCase_Rest_AccountOpen@6d4d66d2</td></tr>
+<tr>
+<td title='com.axelerant.testcases.TestCase_AccountActivity.tc_verifyCheckingAccoutnActivityPage()'><b>tc_verifyCheckingAccoutnActivityPage</b><br>Test class: com.axelerant.testcases.TestCase_AccountActivity<br/>
+<a href="#Output-288468653" onClick='toggleBox("Output-288468653", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-288468653" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-288468653">
+Test Execution started for -> tc_verifyCheckingAccoutnActivityPage<br/>
+Verify Checking account created through Rest API<br/>
+Logging into viplav's account<br/>
+Entering text viplav in  field<br/>
+Entering text demo in  field<br/>
+Navigating to URL - https://parabank.parasoft.com/parabank/activity.htm?id=32103<br/>
+Verifying Checking account activity details<br/>
+Account ID is correct : 32103<br/>
+Account Type is correct : CHECKING<br/>
+Account ID is correct : -100.00<br/>
+Test Execution PASSED for -> tc_verifyCheckingAccoutnActivityPage<br/>
+</div>
+</td>
+<td></td>
+<td>3</td>
+<td>com.axelerant.testcases.TestCase_AccountActivity@78e4deb0</td></tr>
+<tr>
+<td title='com.axelerant.testcases.TestCase_Rest_AccountOpen.tc_createSavingssAccount()'><b>tc_createSavingssAccount</b><br>Test class: com.axelerant.testcases.TestCase_Rest_AccountOpen<br/>
+<a href="#Output-751605377" onClick='toggleBox("Output-751605377", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-751605377" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-751605377">
+Test Execution started for -> tc_createSavingssAccount<br/>
+Create Saving account with API<br/>
+{
+    "id": 32214,
+    "customerId": 19871,
+    "balance": 0,
+    "type": "SAVINGS"
+}<br/>
+Savings account successfully created with ID : 32214<br/>
+{
+    "id": 32214,
+    "customerId": 19871,
+    "balance": 0,
+    "type": "SAVINGS"
+}<br/>
+Test Execution PASSED for -> tc_createSavingssAccount<br/>
+</div>
+</td>
+<td></td>
+<td>2</td>
+<td>com.axelerant.testcases.TestCase_Rest_AccountOpen@6d4d66d2</td></tr>
+<tr>
+<td title='com.axelerant.testcases.TestCase_AccountActivity.tc_verifySavingAccoutnActivityPage()'><b>tc_verifySavingAccoutnActivityPage</b><br>Test class: com.axelerant.testcases.TestCase_AccountActivity<br/>
+<a href="#Output-1165398731" onClick='toggleBox("Output-1165398731", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1165398731" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1165398731">
+Test Execution started for -> tc_verifySavingAccoutnActivityPage<br/>
+Verify Savings account created through Rest API<br/>
+Navigating to URL - https://parabank.parasoft.com/parabank/activity.htm?id=32214<br/>
+Verifying Savings account activity details<br/>
+Account ID is correct : 32214<br/>
+Account Type is correct : SAVINGS<br/>
+Account ID is correct : 100.00<br/>
+Test Execution PASSED for -> tc_verifySavingAccoutnActivityPage<br/>
+</div>
+</td>
+<td></td>
+<td>1</td>
+<td>com.axelerant.testcases.TestCase_AccountActivity@78e4deb0</td></tr>
+<tr>
+<td title='com.axelerant.testcases.TestCase_Rest_AccountOpen.tc_billPayFromCheckingsToSavings()'><b>tc_billPayFromCheckingsToSavings</b><br>Test class: com.axelerant.testcases.TestCase_Rest_AccountOpen<br/>
+<a href="#Output-217930962" onClick='toggleBox("Output-217930962", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-217930962" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-217930962">
+Test Execution started for -> tc_billPayFromCheckingsToSavings<br/>
+Bill Pay using restAPI<br/>
+Bill payment of $200 is successfull.<br/>
+{
+    "payeeName": "RestApi",
+    "amount": 200,
+    "accountId": 32103
+}<br/>
+Verifying amount is deducted correctly from checkings account and balance is updated<br/>
+{
+    "id": 32103,
+    "customerId": 19871,
+    "balance": -100.0,
+    "type": "CHECKING"
+}<br/>
+Amount deducted from checkings account is correct<br/>
+Verify the last transaction amount for Checkings account<br/>
+Last transaction shows 200 debited from checking account : Debit : 200.0<br/>
+Test Execution PASSED for -> tc_billPayFromCheckingsToSavings<br/>
+</div>
+</td>
+<td></td>
+<td>7</td>
+<td>com.axelerant.testcases.TestCase_Rest_AccountOpen@6d4d66d2</td></tr>
+</table><p>
+</body>
+</html>

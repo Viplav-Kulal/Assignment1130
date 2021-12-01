@@ -18,7 +18,7 @@ public class BaseClass implements IBaseInterface {
 	public static final String URL;
 	public static final String user;
 	public static final String pswd;
-	public static final String fullName;
+	public static final String custID;
 	public static final String accountActivityURL;
 	public BaseClass base;
 
@@ -28,7 +28,7 @@ public class BaseClass implements IBaseInterface {
 		URL = configProp.getProperty("appURL");
 		user = configProp.getProperty("userName");
 		pswd = configProp.getProperty("password");
-		fullName = configProp.getProperty("fullName");
+		custID = configProp.getProperty("customerID");
 		accountActivityURL = configProp.getProperty("accountActivityURL");
 	}
 	
