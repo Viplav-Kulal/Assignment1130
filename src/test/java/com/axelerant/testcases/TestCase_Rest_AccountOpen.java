@@ -7,6 +7,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
+import com.axelerant.base.BaseClass;
 import com.axelerant.base.IBaseInterface;
 
 import io.restassured.RestAssured;
@@ -23,7 +24,7 @@ public class TestCase_Rest_AccountOpen extends RestUtils {
 	public static Response resp;
 	public static JsonPath jp;
 	public static String customerID = custID;
-	public static String fromAccount = "29550";
+	public static String fromAccount = BaseClass.fromAccount;
 	public static String newCheckAccountID;
 	public static String newSaveAccountID;
 	public static float checkBalance;

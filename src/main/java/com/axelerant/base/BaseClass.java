@@ -20,6 +20,7 @@ public class BaseClass implements IBaseInterface {
 	public static final String pswd;
 	public static final String custID;
 	public static final String accountActivityURL;
+	public static String fromAccount;
 	public BaseClass base;
 
 
@@ -30,6 +31,7 @@ public class BaseClass implements IBaseInterface {
 		pswd = configProp.getProperty("password");
 		custID = configProp.getProperty("customerID");
 		accountActivityURL = configProp.getProperty("accountActivityURL");
+		fromAccount =configProp.getProperty("fromAccount");
 	}
 	
 	@BeforeSuite

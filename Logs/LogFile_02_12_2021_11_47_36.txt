@@ -1,0 +1,30 @@
+02 Dec 2021 11:47:36  INFO logger - Staring Suite  -> AxelerantAssignment
+02 Dec 2021 11:47:38  INFO logger - Test Execution started for -> tc_createCheckingsAccount
+02 Dec 2021 11:47:38  INFO logger - Create checking account with API
+02 Dec 2021 11:47:41  INFO logger - 500HTTP/1.1 500 
+02 Dec 2021 11:47:41  INFO logger - Failed to create checking account with API
+02 Dec 2021 11:47:41  INFO logger - Test Execution FAILED for -> tc_createCheckingsAccount
+02 Dec 2021 11:47:41  INFO logger - Test Execution started for -> tc_getCheckingAccountDetails
+02 Dec 2021 11:47:41  INFO logger - Verify Cheking account details with API
+02 Dec 2021 11:47:43  INFO logger - Test Execution FAILED for -> tc_getCheckingAccountDetails
+02 Dec 2021 11:47:43  INFO logger - Test Execution started for -> tc_createSavingssAccount
+02 Dec 2021 11:47:43  INFO logger - Create Saving account with API
+02 Dec 2021 11:47:44  INFO logger - 500HTTP/1.1 500 
+02 Dec 2021 11:47:44  INFO logger - Failed to create saving account with API
+02 Dec 2021 11:47:44  INFO logger - Test Execution FAILED for -> tc_createSavingssAccount
+02 Dec 2021 11:47:44  INFO logger - Test Execution started for -> tc_getSavingAccountDetails
+02 Dec 2021 11:47:44  INFO logger - Verify Saving account details with API
+02 Dec 2021 11:47:46  INFO logger - Test Execution FAILED for -> tc_getSavingAccountDetails
+02 Dec 2021 11:47:46  INFO logger - Test Execution started for -> tc_billPayFromCheckingsToSavings
+02 Dec 2021 11:47:46  INFO logger - Bill Pay using restAPI
+02 Dec 2021 11:47:49  INFO logger - Test Execution FAILED for -> tc_billPayFromCheckingsToSavings
+02 Dec 2021 11:47:49  INFO logger - Test Execution started for -> tc_verifySavingsAccountBalanceUpdated
+02 Dec 2021 11:47:50  INFO logger - Verify Saving account balance is updated
+02 Dec 2021 11:47:50  INFO logger - Test Execution FAILED for -> tc_verifySavingsAccountBalanceUpdated
+02 Dec 2021 11:47:50  INFO logger - Test Execution started for -> tc_verifyCheckingAccoutnActivityPage
+02 Dec 2021 11:47:50  INFO logger - Verify Checking account created through Rest API
+02 Dec 2021 11:47:50  INFO logger - Logging into viplav's account
+02 Dec 2021 11:47:50  INFO logger - Entering text viplav in  field
+02 Dec 2021 11:47:51  INFO logger - Entering text demo in  field
+02 Dec 2021 11:47:54  INFO logger - Navigating to URL - https://parabank.parasoft.com/parabank/activity.htm?id=null
+02 Dec 2021 11:48:13  INFO logger - Test Execution FAILED for -> tc_verifyCheckingAccoutnActivityPage
